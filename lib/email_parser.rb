@@ -5,11 +5,11 @@
 class EmailParser
 attr_accessor :
 
-  def initialize(string)
-    @string = string 
+  def initialize(EmailParser)
+    @emails = emails
   end
 
   def parse
-    @spring.split(",")
+    @emails.split(",")
   end 
 end 
