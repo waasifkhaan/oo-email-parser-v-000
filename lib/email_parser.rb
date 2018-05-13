@@ -10,6 +10,8 @@ attr_accessor :emails
   end
 
   def parse
-    @emails.split(", ") || @emails.split(" ")
+    @emails.split(", ")
+    splitemails = @emails.split(/[, ]/)
+    splitemails.delete_if { |email| email.length == 0}
   end 
 end 
