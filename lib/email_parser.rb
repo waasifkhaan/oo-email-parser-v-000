@@ -11,6 +11,6 @@ attr_accessor :emails
 
   def parse
     splitemails = @emails.split(/[, ]/)
-    splitemails.delete_if { |email| email.length == 0}
+    splitemails.delete_if { |email| email.length == 0}.uniq
   end 
 end 
